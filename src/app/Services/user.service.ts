@@ -6,6 +6,7 @@ export interface IUser {
   firstName: string;
   lastName: string;
   gender: string;
+  status: string;
   role: string;
   review: string;
 }

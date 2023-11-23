@@ -16,7 +16,7 @@ export class CrudComponent implements OnInit {
 
   // dataSource: IUser[] = [];
   dataSource!: MatTableDataSource<IUser>;
-  displayedColumns: string[] = ['name', 'gender', 'role', 'review', 'actions'];
+  displayedColumns: string[] = ['name', 'gender', 'role', 'review', 'status', 'actions'];
   searchText!: string;
   filteredList?: IUser[];
   pageSizeOptions: number[] = [5, 10, 25, 100];
@@ -53,7 +53,7 @@ export class CrudComponent implements OnInit {
   }
 
   searchTable(): void {
-    this.filteredList = this.dataSource?.filteredData.filter((user:any) =>
+    this.filteredList = this.dataSource?.filteredData.filter((user: any) =>
       user.firstName.toLowerCase().includes(this.searchText.toLowerCase()) ||
       user.lastName.toLowerCase().includes(this.searchText.toLowerCase())
     );
