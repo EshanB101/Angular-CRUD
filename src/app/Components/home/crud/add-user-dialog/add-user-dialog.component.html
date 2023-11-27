@@ -17,6 +17,13 @@
       <mat-radio-button value="female">Female</mat-radio-button>
       <mat-radio-button value="others">Others</mat-radio-button>
     </mat-radio-group>
+    
+    <mat-form-field class="w-full">
+      <mat-label>User Status: </mat-label>
+      <mat-select formControlName="status">
+        <mat-option [disabled]="addUserForm.controls['status'].value !== 'Admin'" *ngFor="let status of ['Admin', 'User',]" [value]="status">{{status}}</mat-option>
+      </mat-select>
+    </mat-form-field>
 
     <mat-form-field class="w-full">
       <mat-label>Role</mat-label>

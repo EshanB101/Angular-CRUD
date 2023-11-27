@@ -22,7 +22,7 @@ export class AddUserDialogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.addUserForm.patchValue(this.data)
+    this.addUserForm.patchValue(this.data);
   }
 
   closeDialog() {
@@ -34,6 +34,7 @@ export class AddUserDialogComponent implements OnInit {
       firstName: [null, Validators.required],
       lastName: [null, Validators.required],
       gender: [null, Validators.required],
+      status: 'User',
       role: [null, Validators.required],
       review: [null, Validators.required],
     })
